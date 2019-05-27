@@ -1,8 +1,8 @@
 $(window).on('load', function () {
   $preloader = $(".mask"); 
   $loader = $preloader.find('.spinner');
-  $loader.delay(150).fadeOut();
-  $preloader.delay(350).fadeOut('slow');
+  $loader.delay(500).fadeOut();
+  $preloader.delay(250).fadeOut('slow');
 });
 $('.container .circle')
 .on('mouseover',function(){
