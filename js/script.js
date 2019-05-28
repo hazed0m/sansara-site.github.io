@@ -1,8 +1,10 @@
+$('.container').css('display','none');
 $(window).on('load', function () {
   $preloader = $(".mask"); 
   $loader = $preloader.find('.spinner');
   $loader.delay(150).fadeOut();
   $preloader.delay(350).fadeOut('slow');
+  $('.container').fadeIn();
 });
 $('.container .circle')
 .on('mouseover',function(){
