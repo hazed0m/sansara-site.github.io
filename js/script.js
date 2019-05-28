@@ -1,4 +1,3 @@
-$('.container').css('display','none');
 $(window).on('load', function () {
   $preloader = $(".mask"); 
   $loader = $preloader.find('.spinner');
