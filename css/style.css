@@ -12,18 +12,19 @@
 	width:100%;
 	height:100vh;
 	background:url(../img/back.png) no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-position: top;
+	background-size: 102%;
 	position: relative;	
 	overflow:hidden;
+	will-change:background;
 }
 .menu-wrapper
 {
 	padding:35px 15% 20px 20%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;	
-	overflow: hidden;
+	align-items: center;
+	position: relative;
 }
 .menu-wrapper .menu
 {
@@ -55,19 +56,26 @@
 }
 .menu-wrapper .logo-block
 {
+	display:none;
 	width:196px;
 	height:44px;
 	background:url(../img/logo.png) no-repeat;
 	background-position: center;
 	background-size: contain;
-	transition: 0.3s;
+	position: absolute;
+	cursor: pointer;
+	will-change:right,top;
+	/* right:15%;
+	top:20%; */
 }
 .copyright-wrapper
 {
+	display:none;
 	color:#f9f9f9;
 	position: absolute;
-	bottom:55px;
-	left:20%;
+	/* bottom:55px;
+	left:20%; */
+	will-change: bottom, left;
 }
 .copyright-wrapper .copyright-title
 {
@@ -150,7 +158,8 @@ span.bold
 	border:1px dashed #98989c;
 	padding:1px 5px;
 	cursor: pointer;
-	position: relative;
+	position: relative;	
+	user-select:text;
 }
 .server-block .server-info
 {
@@ -216,6 +225,10 @@ span.bold
 	font-weight: bold;
 	margin-left:8px;
 }
+.discord-block a, .vk-block a
+{
+	text-decoration: none;
+}
 .discord-block .ico, .vk-block .ico
 {
 	width:27px;
@@ -259,16 +272,14 @@ span.bold
 	justify-content: center;
 	align-items: center;
 	border-radius: 3px;
-	box-shadow: 0 0 15px #f4e331;
 	font-size:9.68px;
 	cursor:pointer;
-	transition:0.3s;
+	transition:0.5s;
 	font-weight: bold;
 }
 .discord-block .but:hover, .vk-block .but:hover
-{
-	opacity:0.8;
-	transform:scale(1.1);
+{	
+	box-shadow: 0 0 10px #f4e331;
 }
 .social-block 
 {
@@ -336,6 +347,7 @@ span.bold
 }
 .container .circle
 {
+	display:none;
 	width:60px;
 	height:60px;
 	background:url(../img/circle.png) no-repeat;
@@ -343,43 +355,44 @@ span.bold
 	background-size: cover;
 	position: absolute;	
 	animation: spin 100s infinite linear;
+	will-change: top,left;
 }
 .container .circle.c1
 {
-	top:70%;
-	left:10%;	
+	/* top:70%;
+	left:10%;	 */
 	transform-origin: 50% 40px;
 }
 .container .circle.c2
 {
-	top:30%;
-	left:20%;	
+	/* top:30%;
+	left:20%;	 */
 	transform-origin: 50% 50px;
 	animation-direction:reverse;
 }
 .container .circle.c3
 {
-	top:85%;
-	left:50%;	
+	/* top:85%;
+	left:50%;	 */
 	transform-origin: 50% 60px;
 }
 .container .circle.c4
 {
-	top:65%;
-	left:60%;	
+	/* top:65%;
+	left:60%;	 */
 	transform-origin: 50% 75px;
 	animation-direction:reverse;
 }
 .container .circle.c5
 {
-	top:30%;
-	left:85%;	
+	/* top:30%;
+	left:85%;	 */
 	transform-origin: 50% 125px;
 }
 .container .circle.c6
 {
-	top:70%;
-	left:80%;	
+	/* top:70%;
+	left:80%;	 */
 	transform-origin: 50% 80px;
 	animation-direction:reverse;
 }
@@ -850,7 +863,7 @@ span.bold
 		max-width: 768px;
 	}
 }
-@media (max-width:1440px) and (max-height:900px)
+@media (max-width:1440px) and (max-height:900px), (max-width:1600px) and (max-height:900px)
 {
 	.news-wrapper, .guides-wrapper
 	{
