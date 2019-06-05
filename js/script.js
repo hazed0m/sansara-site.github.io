@@ -112,7 +112,7 @@ $(document).ready(function () {
   $(window).mousemove(function(e) {
     moveCursor(e);    
   });  
-  $('.news-block .video-block').each(function(index,item){
+  $('.news-block .video-block, .guides-block .video-block').each(function(index,item){
     console.log($(this));
     let curLink = $(this).attr('data-id');
     if(curLink)
