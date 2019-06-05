@@ -480,6 +480,27 @@ span.bold
 	color:#fff;
 	position: absolute;
 	bottom:55px;
+	text-decoration: none;
+	outline:none;
+}
+.news-wrapper .news-block .video-block i
+{
+	display: block;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	font-size:19px;
+	color:#fff;
+	background:rgb(30, 30, 30);
+	text-align: center;
+	transition: 0.2s;
+	padding:10px 18px 10px 22px;
+	border-radius:8px;
+}
+.news-wrapper .news-block .video-block:hover i
+{
+	background:red;
 }
 .slick-slider
 {

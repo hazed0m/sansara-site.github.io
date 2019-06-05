@@ -112,4 +112,13 @@ $(document).ready(function () {
   $(window).mousemove(function(e) {
     moveCursor(e);    
   });  
+  $('.news-block .video-block').each(function(index,item){
+    console.log($(this));
+    let curLink = $(this).attr('data-id');
+    if(curLink)
+    {
+      $(this).empty();
+      $(this).append(`<img style="width:100%;height:100%" src="https://img.youtube.com/vi/${curLink}/0.jpg"><i class="fas fa-play"></i>`);
+    }
+  });
 });
