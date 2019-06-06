@@ -104,7 +104,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="g-recaptcha" id="g-recaptcha" data-sitekey="6LcShqcUAAAAAEFfGkm9KKambio8Ik5XGbD3Lruz"></div>
 			<div class="welcome-block animated zoomInUp">
 				<div class="welcome-title">
 					<p>Sansara Role Play</p>
@@ -124,21 +123,6 @@
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
-	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
-	<script type="text/javascript">
-		var verifyCallback = function(response) {
-		  alert(response);
-		};
-		var onloadCallback = function() {
-		  grecaptcha.render('g-recaptcha', {
-			'sitekey' : '6LcShqcUAAAAAEFfGkm9KKambio8Ik5XGbD3Lruz',
-			'callback' : verifyCallback,
-			'theme' : 'dark'
-		  });
-		};
-	  </script>
 	<script src="js/clipboard.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
