@@ -483,7 +483,8 @@ span.bold
 	text-decoration: none;
 	outline:none;
 }
-.news-wrapper .news-block .video-block i
+.news-wrapper .news-block .video-block i,
+.guides-wrapper .guides-block .video-block i
 {
 	display: block;
 	position: absolute;
@@ -498,7 +499,8 @@ span.bold
 	padding:10px 18px 10px 22px;
 	border-radius:8px;
 }
-.news-wrapper .news-block .video-block:hover i
+.news-wrapper .news-block .video-block:hover i,
+.guides-wrapper .guides-block .video-block:hover i
 {
 	background:red;
 }

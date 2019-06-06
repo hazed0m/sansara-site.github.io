@@ -113,7 +113,6 @@ $(document).ready(function () {
     moveCursor(e);    
   });  
   $('.news-block .video-block, .guides-block .video-block').each(function(index,item){
-    console.log($(this));
     let curLink = $(this).attr('data-id');
     if(curLink)
     {
