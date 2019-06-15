@@ -119,5 +119,5 @@ $(document).ready(function () {
       $(this).empty();
       $(this).append(`<img style="width:100%;height:100%" src="https://img.youtube.com/vi/${curLink}/0.jpg"><i class="fas fa-play"></i>`);
     }
-  });
+  });  
 });

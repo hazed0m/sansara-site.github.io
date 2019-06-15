@@ -5,11 +5,23 @@
 	padding:0;
 	box-sizing: border-box;
 	user-select: none;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: subpixel-antialiased;	
 }
 body
 {
 	overflow:hidden;
 }
+/* .container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5) url(/img/setka.gif);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+} */
 .container
 {
 	display:none;
@@ -68,7 +80,7 @@ body
 	background-size: contain;
 	position: absolute;
 	cursor: pointer;
-	will-change:right,top;
+	will-change:left,top;
 	/* right:15%;
 	top:20%; */
 }
@@ -97,12 +109,13 @@ body
 	position: absolute;
 	top:50%;
 	left:50%;
-	transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%) translateZ(0px);
 	flex-wrap:wrap;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	color:#fff;
+	color:#fff;	
+	-webkit-perspective: 1000px;
 }
 .main-wrapper .servers-block
 {
@@ -426,9 +439,10 @@ span.bold
 	width:351px;
 	height:428px;
 	background:url(../img/news-back.png) no-repeat;
-	background-position: center;
+	background-position: bottom;
 	background-size:cover;
 	padding:24px 18px 0 35px;
+	box-sizing: border-box;
 	position: relative;
 	outline:none;
 	display: flex;
@@ -472,19 +486,20 @@ span.bold
 	margin-top:45px!important;
 }
 .news-wrapper .news-block .video-block, .guides-wrapper .guides-block .video-block
-{	
+{		
+	position: absolute;
 	margin:0 auto;
 	margin-top:20px;
-	width:294px;
-	height:164px;
+	width: 80%;
+    height: 46%;
+    font-size: 11px;
+    bottom: 15%;
 	background:#000000;
 	display: flex;
 	justify-content: center;
 	align-items: center;	
 	font-size:12.89px;
 	color:#fff;
-	position: absolute;
-	bottom:55px;
 	text-decoration: none;
 	outline:none;
 }
@@ -656,11 +671,12 @@ span.bold
 	width:700px;
 	height:680px;
 	background:url(../img/rules-back.png) no-repeat;
-	background-position: center;
-	background-size: contain;
+	background-position: bottom;
+	background-size: cover;
 	margin-left:35px;
-	padding:25px 35px 25px 35px;
+	padding:1% 2% 1% 2%;
 	animation-duration: 0.9s!important;
+	box-sizing: border-box;
 }
 .rules-wrapper .rules-desk .rules-title
 {
@@ -900,7 +916,7 @@ span.bold
 		max-width: 768px;
 	}
 }
-@media (max-width:1440px) and (max-height:900px), (max-width:1600px) and (max-height:900px)
+/* @media (max-width:1440px) and (max-height:900px), (max-width:1600px) and (max-height:900px)
 {
 	.news-wrapper, .guides-wrapper
 	{
@@ -918,25 +934,26 @@ span.bold
 	{
 		margin-top:40px!important;
 	}
-}
-@media (max-width:1366px) and (max-height:768px)
+} */
+@media (max-width:1366px) and (max-height:768px), (max-width:1440px) and (max-height:900px), (max-width:1600px) and (max-height:900px)
 {
 	.main-wrapper
 	{
-		width:85%;
+		width:65%;
 	}
 	.const-wrapper .gta-block, .const-wrapper .rage-block, .const-wrapper .notif-block
 	{
 		margin:0 10px;
-		width:228px;
-		height:169px;
+		width: 28vh;
+		height: 22vh;
+		box-sizing: border-box;
 		padding: 0 9px 0 12px;
 		text-align: center;
 	}
 	.const-wrapper .gta-block .logo
 	{
 		width:90px;
-		height:79px;
+		height:75px;
 		background-image:url(../img/gtav-logo.png);
 	}
 	.const-wrapper .rage-block .logo
@@ -947,17 +964,18 @@ span.bold
 		margin-top:10px;
 		margin-bottom:20px;
 	}
-	.news-wrapper , .guides-wrapper
-	{
-		width:40%;
+	.news-wrapper, .guides-wrapper
+	{		
+		max-width: 700px;
+		width:100%;		
+	}
+	.guides-wrapper
+	{		
+		transform: translate(-50%,-42%);
 	}
 	.news-wrapper .news-block, .guides-wrapper .guides-block 
 	{
-		width:321px;
-		height:328px;
-		background:url(../img/news-back.png) no-repeat;
-		background-position: center;
-		background-size:cover;
+		height:50vh;
 		padding:24px 18px 0 35px;
 	}
 	.const-wrapper .text-block .bottom-text
@@ -1011,10 +1029,7 @@ span.bold
 	{	
 		margin:0 auto;
 		margin-top:20px;
-		width:224px;
-		height:114px;	
 		font-size:11px;
-		bottom:35px;
 	}
 	.news-block.slick-current , .guides-block.slick-current
 	{
@@ -1022,8 +1037,8 @@ span.bold
 	}
 	.rules-menu .rules-title 
 	{
-		width: 175px;
-		height: 35px;
+		width: 160px;
+		height: 40px;
 		font-size:14px;
 	}
 	.rules-menu .rules-state 
@@ -1042,15 +1057,15 @@ span.bold
 	}
 	.rules-wrapper .rules-block .rules-item
 	{
-		font-size:14px;
+		font-size:13px;
 		padding:4px 5px 4px 0;
 		margin-bottom:5px;
 	}
-	.rules-wrapper .rules-desk 
-	{
-		width: 600px;
-		height: 550px;
-		padding: 10px 35px 0 35px;
+	.rules-wrapper .rules-desk {
+		width: 75vh;
+		height: 67vh;			
+		background-position: bottom;
+		background-size: cover;	
 	}
 	.rules-wrapper .rules-desk .rules-title, .rules-wrapper .rules-desk .rules-text
 	{
@@ -1073,8 +1088,8 @@ span.bold
 	}
 	.main-wrapper .servers-block 
 	{
-		width: 308px;
-		height: 295px;
+		width: 353px;
+		height: 300px;
 		padding: 20px 15px 0 23px;
 	}
 	.server-block .server-name
@@ -1105,10 +1120,6 @@ span.bold
 {
 	.news-wrapper, .guides-wrapper {
 		width:50%;
-	}
-	.rules-wrapper .rules-desk {
-		width: 600px;
-		height: 550px;
 	}
 }
 @media (max-width:1024px) and (max-height:768px)
