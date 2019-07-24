@@ -153,10 +153,18 @@ $('#rules').on('click',function(){
     $('.rules-wrapper .rules-menu').removeClass('animated fadeOutRight').addClass('animated fadeInRight').css('display','flex').css('z-index','99999');
     $('.mask').fadeIn().css('z-index','99999');
     $(this).css('z-index','99999');
+    if(window.innerHeight > 550)
+    {
+      $('body').css({'overflow':'hidden','max-height':'100vh'});
+    }
   }
   else
   {
     closeRulesMenu();
+    if(window.innerHeight > 550)
+    {
+      $('body').css({'overflow':'visible','max-height':'100%'});
+    }
   }
 });
 $('.rules-menu .rules-item').on('click',function(){
