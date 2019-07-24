@@ -1414,7 +1414,7 @@ span.bold
 		width: 90%;
 		height: auto;
 		background-size: contain;
-		padding: 25px 20px 28px 23px;
+		padding: 5% 7% 5% 10%;
 	}	
 	.news-wrapper, .guides-wrapper {
 		max-width: 270px;
@@ -1435,7 +1435,7 @@ span.bold
 		min-width:95%;
 		width: 99%;
 		height: auto;
-		padding:8%;
+		padding:7% 12%;
 	}	
 	.server-block
 	{
@@ -1458,6 +1458,7 @@ span.bold
 		min-width:95%;
 		width: 99%;
 		height: auto;
+		padding:8%;
 	}
 }
 @media (min-height:551px)
