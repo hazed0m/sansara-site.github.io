@@ -1464,11 +1464,8 @@ span.bold
 		width: 245px;
 		height: 170px;
 	}
-	.menu-wrapper .menu {
-		flex-direction: row;
-		justify-content: space-around;
-		align-items: center;
-		flex-wrap: wrap;
+	.menu-wrapper .menu a {
+		margin: 10px 0;
 	}
 	.rules-wrapper .rules-menu
 	{
@@ -1479,5 +1476,14 @@ span.bold
 		height: 40%;
 		bottom: 11%;
 		left: 25px;
+	}
+}
+@media (max-height:350px)
+{
+	.menu-wrapper .menu {
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 }
