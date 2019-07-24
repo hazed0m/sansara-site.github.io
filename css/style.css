@@ -1467,10 +1467,6 @@ span.bold
 	.menu-wrapper .menu a {
 		margin: 14px 0;
 	}
-	.rules-wrapper .rules-menu
-	{
-		top:-30px;
-	}
 	.news-wrapper .news-block .video-block, .guides-wrapper .guides-block .video-block {
 		width: 80%;
 		height: 40%;
@@ -1485,5 +1481,9 @@ span.bold
 		justify-content: space-around;
 		align-items: center;
 		flex-wrap: wrap;
+	}	
+	.rules-wrapper .rules-menu
+	{
+		top:-30px;
 	}
 }
