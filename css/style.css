@@ -114,7 +114,7 @@ body
 	justify-content: space-around;
 	align-items: center;
 	color:#fff;	
-	-webkit-perspective: 1000px;
+	perspective: 1000px;
 }
 .main-wrapper .servers-block
 {
@@ -1219,6 +1219,12 @@ span.bold
 }
 @media (max-width:920px)
 {		
+	.menu-wrapper .menu-item:hover
+	{
+		color:#d9d9db;
+		padding-bottom:0;
+		border-bottom:none;
+	}
 	.menu-wrapper .menu
 	{
 		max-width: 100%;
